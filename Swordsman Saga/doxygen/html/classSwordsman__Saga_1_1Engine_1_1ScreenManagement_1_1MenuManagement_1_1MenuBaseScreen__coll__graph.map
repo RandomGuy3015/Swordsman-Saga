@@ -1,0 +1,9 @@
+<map id="Swordsman_Saga.Engine.ScreenManagement.MenuManagement.MenuBaseScreen&lt; TButtonNumeration &gt;" name="Swordsman_Saga.Engine.ScreenManagement.MenuManagement.MenuBaseScreen&lt; TButtonNumeration &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="707,123,1013,179"/>
+<area shape="rect" id="node2" href="$interfaceSwordsman__Saga_1_1Engine_1_1ScreenManagement_1_1IScreen.html" title=" " alt="" coords="362,5,433,32"/>
+<area shape="rect" id="node3" href="$classSwordsman__Saga_1_1Engine_1_1SoundManagement_1_1SoundManager.html" title=" " alt="" coords="283,57,512,98"/>
+<area shape="rect" id="node4" href="$classSwordsman__Saga_1_1Engine_1_1DynamicContentManagement_1_1DynamicContentManager.html" title=" " alt="" coords="261,123,533,179"/>
+<area shape="rect" id="node5" href="$classSwordsman__Saga_1_1Engine_1_1InputManagement_1_1InputManager.html" title=" " alt="" coords="286,203,509,245"/>
+<area shape="rect" id="node6" href="$classInputState.html" title=" " alt="" coords="353,269,442,296"/>
+<area shape="rect" id="node7" title=" " alt="" coords="5,269,100,296"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Swordsman_Saga.GameElements.Screens.AchievementScreen" name="Swordsman_Saga.GameElements.Screens.AchievementScreen">
+<area shape="rect" id="node1" title=" " alt="" coords="5,80,251,121"/>
+<area shape="rect" id="node2" href="$interfaceSwordsman__Saga_1_1Engine_1_1ScreenManagement_1_1IScreen.html" title=" " alt="" coords="93,5,163,32"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="IDrawableObject" name="IDrawableObject">
+<area shape="rect" id="node1" title=" " alt="" coords="5,216,136,243"/>
+<area shape="rect" id="node2" href="$interfaceIGameObject.html" title=" " alt="" coords="184,216,291,243"/>
+<area shape="rect" id="node3" href="$interfaceIStaticObject.html" title=" " alt="" coords="401,157,507,184"/>
+<area shape="rect" id="node12" href="$interfaceSwordsman__Saga_1_1Engine_1_1ObjectManagement_1_1ICollidableObject.html" title=" " alt="" coords="339,209,569,250"/>
+<area shape="rect" id="node13" href="$interfaceSwordsman__Saga_1_1Engine_1_1ObjectManagement_1_1ISelectableObject.html" title=" " alt="" coords="339,274,569,315"/>
+<area shape="rect" id="node4" href="$interfaceIBuilding.html" title=" " alt="" coords="626,107,705,133"/>
+<area shape="rect" id="node9" href="$interfaceIMapObject.html" title=" " alt="" coords="617,208,713,235"/>
+<area shape="rect" id="node5" href="$classBarracks.html" title=" " alt="" coords="777,5,855,32"/>
+<area shape="rect" id="node6" href="$classLumberCamp.html" title=" " alt="" coords="761,56,871,83"/>
+<area shape="rect" id="node7" href="$classQuarry.html" title=" " alt="" coords="783,107,849,133"/>
+<area shape="rect" id="node8" href="$classTownHall.html" title=" " alt="" coords="775,157,857,184"/>
+<area shape="rect" id="node10" href="$classStone.html" title=" " alt="" coords="787,208,845,235"/>
+<area shape="rect" id="node11" href="$classTree.html" title=" " alt="" coords="791,259,841,285"/>
+</map>

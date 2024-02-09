@@ -1,0 +1,11 @@
+<map id="Quarry" name="Quarry">
+<area shape="rect" id="node1" title=" " alt="" coords="337,304,404,331"/>
+<area shape="rect" id="node2" href="$interfaceIBuilding.html" title=" " alt="" coords="331,229,410,256"/>
+<area shape="rect" id="node3" href="$interfaceIStaticObject.html" title=" " alt="" coords="95,155,201,181"/>
+<area shape="rect" id="node4" href="$interfaceIGameObject.html" title=" " alt="" coords="95,80,201,107"/>
+<area shape="rect" id="node5" href="$interfaceIDrawableObject.html" title=" " alt="" coords="5,5,136,32"/>
+<area shape="rect" id="node6" href="$interfaceSwordsman__Saga_1_1Engine_1_1DataPersistence_1_1IDataPersistence.html" title=" " alt="" coords="161,5,293,32"/>
+<area shape="rect" id="node7" title=" " alt="" coords="225,155,359,181"/>
+<area shape="rect" id="node8" title=" " alt="" coords="383,155,519,181"/>
+<area shape="rect" id="node9" href="$interfaceIUpdateableObject.html" title=" " alt="" coords="543,155,686,181"/>
+</map>

@@ -1,0 +1,6 @@
+namespace Swordsman_Saga.Engine.ScreenManagement.MenuManagement;
+
+public class Label
+{
+    
+}

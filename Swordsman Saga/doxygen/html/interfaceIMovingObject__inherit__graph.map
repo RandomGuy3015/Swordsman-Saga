@@ -1,0 +1,11 @@
+<map id="IMovingObject" name="IMovingObject">
+<area shape="rect" id="node1" title=" " alt="" coords="182,80,298,107"/>
+<area shape="rect" id="node3" href="$interfaceIUnit.html" title=" " alt="" coords="213,155,267,181"/>
+<area shape="rect" id="node2" title=" " alt="" coords="173,5,307,32"/>
+<area shape="rect" id="node4" href="$interfaceIMelee.html" title=" " alt="" coords="160,229,227,256"/>
+<area shape="rect" id="node8" href="$interfaceIRanged.html" title=" " alt="" coords="276,229,351,256"/>
+<area shape="rect" id="node5" href="$classKnight.html" title=" " alt="" coords="5,304,69,331"/>
+<area shape="rect" id="node6" href="$classSwordsman.html" title=" " alt="" coords="93,304,192,331"/>
+<area shape="rect" id="node7" href="$classWorker.html" title=" " alt="" coords="216,304,283,331"/>
+<area shape="rect" id="node9" href="$classArcher.html" title=" " alt="" coords="307,304,371,331"/>
+</map>

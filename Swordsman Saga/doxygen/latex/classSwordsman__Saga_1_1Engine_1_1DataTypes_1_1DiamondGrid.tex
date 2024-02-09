@@ -1,0 +1,70 @@
+\hypertarget{classSwordsman__Saga_1_1Engine_1_1DataTypes_1_1DiamondGrid}{}\doxysection{Swordsman\+\_\+\+Saga.\+Engine.\+Data\+Types.\+Diamond\+Grid Class Reference}
+\label{classSwordsman__Saga_1_1Engine_1_1DataTypes_1_1DiamondGrid}\index{Swordsman\_Saga.Engine.DataTypes.DiamondGrid@{Swordsman\_Saga.Engine.DataTypes.DiamondGrid}}
+
+
+Diamond Grid that fits over isometric Map.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSwordsman__Saga_1_1Engine_1_1DataTypes_1_1DiamondGrid_a46df2382b9e649674242c6c289cbc34b}\label{classSwordsman__Saga_1_1Engine_1_1DataTypes_1_1DiamondGrid_a46df2382b9e649674242c6c289cbc34b}} 
+{\bfseries Diamond\+Grid} (Vector2 slotdims, Vector2 startpos)
+\item 
+\mbox{\Hypertarget{classSwordsman__Saga_1_1Engine_1_1DataTypes_1_1DiamondGrid_adb9c545100d643742306c0fe655328e7}\label{classSwordsman__Saga_1_1Engine_1_1DataTypes_1_1DiamondGrid_adb9c545100d643742306c0fe655328e7}} 
+void {\bfseries Draw\+Grid} (Sprite\+Batch sprite\+Batch)
+\item 
+\mbox{\Hypertarget{classSwordsman__Saga_1_1Engine_1_1DataTypes_1_1DiamondGrid_ad2b4fde6629f68feb840c25838f3537c}\label{classSwordsman__Saga_1_1Engine_1_1DataTypes_1_1DiamondGrid_ad2b4fde6629f68feb840c25838f3537c}} 
+void {\bfseries Update\+Grid} (\mbox{\hyperlink{interfaceIGameObject}{IGame\+Object}} updateable\+Object, Vector2 last\+Grid\+Location, List$<$ \mbox{\hyperlink{interfaceIGameObject}{IGame\+Object}} $>$ game\+Objects)
+\item 
+\mbox{\Hypertarget{classSwordsman__Saga_1_1Engine_1_1DataTypes_1_1DiamondGrid_a8fb0f9d8e9cbcc599ab54cd835061c76}\label{classSwordsman__Saga_1_1Engine_1_1DataTypes_1_1DiamondGrid_a8fb0f9d8e9cbcc599ab54cd835061c76}} 
+Vector2 {\bfseries Get\+Slot\+Position\+From\+Pixel} (Vector2 pixel)
+\item 
+\mbox{\Hypertarget{classSwordsman__Saga_1_1Engine_1_1DataTypes_1_1DiamondGrid_ac556364227d06bb856c172908e0fb407}\label{classSwordsman__Saga_1_1Engine_1_1DataTypes_1_1DiamondGrid_ac556364227d06bb856c172908e0fb407}} 
+\mbox{\hyperlink{classSwordsman__Saga_1_1Engine_1_1DataTypes_1_1Grids_1_1GridLocation}{Grid\+Location}} {\bfseries Get\+Grid\+Location\+From\+Slot} (Vector2 slot\+Pos)
+\item 
+\mbox{\Hypertarget{classSwordsman__Saga_1_1Engine_1_1DataTypes_1_1DiamondGrid_ac844d5e38d4906c266cd1b8a4865cfda}\label{classSwordsman__Saga_1_1Engine_1_1DataTypes_1_1DiamondGrid_ac844d5e38d4906c266cd1b8a4865cfda}} 
+List$<$ Vector2 $>$ {\bfseries Get\+Slot\+Positions\+In\+Area} (Vector2 pos1, Vector2 pos2)
+\item 
+\mbox{\Hypertarget{classSwordsman__Saga_1_1Engine_1_1DataTypes_1_1DiamondGrid_a905cf1a837e2863f2447f1798f1f517f}\label{classSwordsman__Saga_1_1Engine_1_1DataTypes_1_1DiamondGrid_a905cf1a837e2863f2447f1798f1f517f}} 
+Rectangle {\bfseries Get\+Grid\+Rectangle\+From\+Pixel} (Vector2 pixel)
+\item 
+\mbox{\Hypertarget{classSwordsman__Saga_1_1Engine_1_1DataTypes_1_1DiamondGrid_a0d7a71a961220784cd7baeb743844650}\label{classSwordsman__Saga_1_1Engine_1_1DataTypes_1_1DiamondGrid_a0d7a71a961220784cd7baeb743844650}} 
+Rectangle {\bfseries Get\+Grid\+Rectangle\+From\+Pixel} (Vector2 pixel, int size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly Dictionary$<$(int, int), List$<$ \mbox{\hyperlink{interfaceIGameObject}{IGame\+Object}} $>$ $>$ {\bfseries m\+Grid\+Content}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSwordsman__Saga_1_1Engine_1_1DataTypes_1_1DiamondGrid_a8432f6d5c05458cb6c15b12311c51b38}\label{classSwordsman__Saga_1_1Engine_1_1DataTypes_1_1DiamondGrid_a8432f6d5c05458cb6c15b12311c51b38}} 
+bool {\bfseries Show\+Grid}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Diamond Grid that fits over isometric Map. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classSwordsman__Saga_1_1Engine_1_1DataTypes_1_1DiamondGrid_a3dc0e0c9abc25790200be7992146010f}\label{classSwordsman__Saga_1_1Engine_1_1DataTypes_1_1DiamondGrid_a3dc0e0c9abc25790200be7992146010f}} 
+\index{Swordsman\_Saga.Engine.DataTypes.DiamondGrid@{Swordsman\_Saga.Engine.DataTypes.DiamondGrid}!mGridContent@{mGridContent}}
+\index{mGridContent@{mGridContent}!Swordsman\_Saga.Engine.DataTypes.DiamondGrid@{Swordsman\_Saga.Engine.DataTypes.DiamondGrid}}
+\doxysubsubsection{\texorpdfstring{mGridContent}{mGridContent}}
+{\footnotesize\ttfamily readonly Dictionary$<$(int, int), List$<$\mbox{\hyperlink{interfaceIGameObject}{IGame\+Object}}$>$ $>$ Swordsman\+\_\+\+Saga.\+Engine.\+Data\+Types.\+Diamond\+Grid.\+m\+Grid\+Content}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{            \textcolor{keyword}{new} Dictionary<(int, int), List<IGameObject>>()}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Engine/\+Data\+Types/Diamond\+Grid.\+cs\end{DoxyCompactItemize}

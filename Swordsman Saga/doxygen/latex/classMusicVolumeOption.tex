@@ -1,0 +1,93 @@
+\hypertarget{classMusicVolumeOption}{}\doxysection{Music\+Volume\+Option Class Reference}
+\label{classMusicVolumeOption}\index{MusicVolumeOption@{MusicVolumeOption}}
+
+
+Inheritance diagram for Music\+Volume\+Option\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classMusicVolumeOption__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Music\+Volume\+Option\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{classMusicVolumeOption__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMusicVolumeOption_abe207b0f15e05a6f0db24d61fb649259}\label{classMusicVolumeOption_abe207b0f15e05a6f0db24d61fb649259}} 
+{\bfseries Music\+Volume\+Option} (\mbox{\hyperlink{classSwordsman__Saga_1_1Engine_1_1SoundManagement_1_1SoundManager}{Sound\+Manager}} sound\+Manager, int value)
+\item 
+\mbox{\Hypertarget{classMusicVolumeOption_a26285f51d026f0ae03604074c0d63383}\label{classMusicVolumeOption_a26285f51d026f0ae03604074c0d63383}} 
+void {\bfseries Initialize} (string name, int value, int min\+Value, int max\+Value, List$<$ Action\+Type $>$ allowed\+Input\+Actions)
+\item 
+\mbox{\Hypertarget{classMusicVolumeOption_a9278bda56b5c08e296fa77152d11242d}\label{classMusicVolumeOption_a9278bda56b5c08e296fa77152d11242d}} 
+void {\bfseries Start\+Editing} ()
+\item 
+\mbox{\Hypertarget{classMusicVolumeOption_ac5f6eaf4146fc9f21f8c9087ad5e549d}\label{classMusicVolumeOption_ac5f6eaf4146fc9f21f8c9087ad5e549d}} 
+void {\bfseries Stop\+Editing} ()
+\item 
+\mbox{\Hypertarget{classMusicVolumeOption_a08aee9eb4ad6e2f08b9ba74df68b6f48}\label{classMusicVolumeOption_a08aee9eb4ad6e2f08b9ba74df68b6f48}} 
+void {\bfseries Set\+Value} (int value)
+\item 
+\mbox{\Hypertarget{classMusicVolumeOption_aa32adf12a82108f42af36920e933345a}\label{classMusicVolumeOption_aa32adf12a82108f42af36920e933345a}} 
+void {\bfseries Save\+Option} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMusicVolumeOption_a4845846a89dcada4cdda989b38aa24a3}\label{classMusicVolumeOption_a4845846a89dcada4cdda989b38aa24a3}} 
+int {\bfseries Value}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{classMusicVolumeOption_a4d2b79462cf7191980bbd144606d6091}\label{classMusicVolumeOption_a4d2b79462cf7191980bbd144606d6091}} 
+int {\bfseries Min\+Value} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{classMusicVolumeOption_a7da7f80b1d1ef875312f208d4eb5eb24}\label{classMusicVolumeOption_a7da7f80b1d1ef875312f208d4eb5eb24}} 
+int {\bfseries Max\+Value} = 100\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{classMusicVolumeOption_a6e266335107fdd22eab08a35ee8fd4a1}\label{classMusicVolumeOption_a6e266335107fdd22eab08a35ee8fd4a1}} 
+bool {\bfseries Is\+Editable}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+List$<$ Action\+Type $>$ {\bfseries Allowed\+Input\+Actions}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{classMusicVolumeOption_aa83dd758175a2cc7184d86cdb9675cf8}\label{classMusicVolumeOption_aa83dd758175a2cc7184d86cdb9675cf8}} 
+string {\bfseries Name} = \char`\"{}Music\+Volume\char`\"{}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{classMusicVolumeOption_afb097a1cd003bc2e29b55b826c989ca1}\label{classMusicVolumeOption_afb097a1cd003bc2e29b55b826c989ca1}} 
+\index{MusicVolumeOption@{MusicVolumeOption}!AllowedInputActions@{AllowedInputActions}}
+\index{AllowedInputActions@{AllowedInputActions}!MusicVolumeOption@{MusicVolumeOption}}
+\doxysubsubsection{\texorpdfstring{AllowedInputActions}{AllowedInputActions}}
+{\footnotesize\ttfamily List$<$Action\+Type$>$ Music\+Volume\+Option.\+Allowed\+Input\+Actions\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{keyword}{new}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        ActionType.PressKey0,}
+\DoxyCodeLine{        ActionType.PressKey1,}
+\DoxyCodeLine{        ActionType.PressKey2,}
+\DoxyCodeLine{        ActionType.PressKey3,}
+\DoxyCodeLine{        ActionType.PressKey4,}
+\DoxyCodeLine{        ActionType.PressKey5,}
+\DoxyCodeLine{        ActionType.PressKey6,}
+\DoxyCodeLine{        ActionType.PressKey7,}
+\DoxyCodeLine{        ActionType.PressKey8,}
+\DoxyCodeLine{        ActionType.PressKey9,}
+\DoxyCodeLine{        ActionType.PressBackSpaceKey,}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Game\+Elements/\+Screens/\+Options/Music\+Volume\+Option.\+cs\end{DoxyCompactItemize}
