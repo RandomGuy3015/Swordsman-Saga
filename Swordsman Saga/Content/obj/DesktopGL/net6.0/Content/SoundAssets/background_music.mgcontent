@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/SoundAssets/background_music.mp3</SourceFile>
+  <SourceTime>2023-12-02T15:02:35.5555464+01:00</SourceTime>
+  <DestFile>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/bin/DesktopGL/Content/SoundAssets/background_music.xnb</DestFile>
+  <DestTime>2023-12-02T15:03:02.0332876+01:00</DestTime>
+  <Importer>Mp3Importer</Importer>
+  <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
+  <Processor>SongProcessor</Processor>
+  <ProcessorTime>2022-07-26T13:44:56+02:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput>
+    <string>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/bin/DesktopGL/Content/SoundAssets/background_music.ogg</string>
+  </BuildOutput>
+</PipelineBuildEvent>

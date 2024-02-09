@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/Fonts/Arial32.spritefont</SourceFile>
+  <SourceTime>2024-01-15T13:01:14.9531959+01:00</SourceTime>
+  <DestFile>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/bin/DesktopGL/Content/Fonts/Arial32.xnb</DestFile>
+  <DestTime>2024-01-15T14:05:44.48393+01:00</DestTime>
+  <Importer>FontDescriptionImporter</Importer>
+  <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
+  <Processor>FontDescriptionProcessor</Processor>
+  <ProcessorTime>2022-07-26T13:44:56+02:00</ProcessorTime>
+  <Parameters>
+    <Key>PremultiplyAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Compressed</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

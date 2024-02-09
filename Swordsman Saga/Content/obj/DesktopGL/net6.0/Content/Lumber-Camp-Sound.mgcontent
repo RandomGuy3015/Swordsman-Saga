@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/Lumber-Camp-Sound.wav</SourceFile>
+  <SourceTime>2023-11-27T10:21:52.2733325+01:00</SourceTime>
+  <DestFile>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/bin/DesktopGL/Content/Lumber-Camp-Sound.xnb</DestFile>
+  <DestTime>2023-11-27T10:22:55.7964256+01:00</DestTime>
+  <Importer>WavImporter</Importer>
+  <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2022-07-26T13:44:56+02:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

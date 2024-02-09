@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_lumbercamp_selected.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_lumbercamp.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/enemy_barracks.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/enemy_lumber_camp.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/enemy_stonequarry.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/enemy_townhall.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_barracks_being_built_selected.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_barracks_preview.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_barracks_selected.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_barracks.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_lumbercamp_being_built_selected.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_lumbercamp_being_built.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_lumbercamp_preview.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_stonequarry_being_built_selected.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_stonequarry_being_built.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_stonequarry_preview.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_stonequarry_selected.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_stonequarry.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_townhall_selected.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_townhall.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_barracks _being_built.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

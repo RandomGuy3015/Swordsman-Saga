@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/enemy_barrack_being_build.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/enemy_barracks_preview.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/enemy_barracks_selected_to_be_attacked.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/enemy_barracks.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/enemy_lumber_camp_being_build.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/enemy_lumber_camp_preview.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/enemy_lumber_camp_selected_to_be_attacked.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/enemy_lumber_camp.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/enemy_stonequarry_being_build.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/enemy_stonequarry_preview.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/enemy_stonequarry_selected_to_be_attacked.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/enemy_stonequarry.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/enemy_townhall_selected_to_be_attacked.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/enemy_townhall.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_barracks_being_built_selected.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_barracks_being_built.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_barracks_preview.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_barracks_selected.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_barracks.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_lumbercamp_being_built_selected.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_lumbercamp_being_built.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_lumbercamp_preview.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_lumbercamp_selected.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_lumbercamp.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_stonequarry_being_built_selected.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_stonequarry_being_built.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_stonequarry_preview.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_stonequarry_selected.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_stonequarry.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_townhall_selected - Copy.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_townhall_selected.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/Buildings/friendly_townhall.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/circle.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/GameObjectAssets/Buildings/enemy_lumber_camp_invis.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/GameObjectAssets/Buildings/enemy_stonequarry_invis.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/GameObjectAssets/Buildings/enemy_townhall_invis.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/GameObjectAssets/Buildings/friendly_lumbercamp_invis.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/GameObjectAssets/Buildings/friendly_stonequarry_invis.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/GameObjectAssets/Buildings/friendly_townhall_invis.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/GameObjectAssets/Units/enemy_archer.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/GameObjectAssets/Units/enemy_knight.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/GameObjectAssets/Units/enemy_swordsman.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/GameObjectAssets/Units/enemy_worker.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/GameObjectAssets/Units/friendly_archer_is_selected.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/GameObjectAssets/Units/friendly_archer.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/GameObjectAssets/Units/friendly_knight_is_selected.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/GameObjectAssets/Units/friendly_knight.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/GameObjectAssets/Units/friendly_swordsman_is_selected.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/GameObjectAssets/Units/friendly_swordsman.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/GameObjectAssets/Units/friendly_worker_is_selected.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/GameObjectAssets/Units/friendly_worker.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/icons/icon_barracks.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/icons/icon_lumbercamp.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/icons/icon_stonequarry.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/stone_is_being_attacked.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/stone.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/tree_selected_is_being_attacked.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/tree.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/2DAssets/wood.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/background.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/basic_font.spritefont</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/bullet.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/bulletSelected.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/Button.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/ButtonHover.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/ButtonNew.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/ButtonNewAchievement.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/ButtonNewHover.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/Defeat.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/ExtraBackground.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/Floor.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/Fonts/Arial32.spritefont</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/Lumber-Camp-Sound.wav</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/Mining-Camp-Sound.wav</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/pine-half04.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/pine-half05.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/pine-none03.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/pine-none06.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/Scroll.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/Scrollbar.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/SoundAssets/Arrow_sound.wav</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/SoundAssets/background_music.mp3</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/SoundAssets/Barracks_sound.wav</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/SoundAssets/basic_soundeffect.wav</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/SoundAssets/Building_destroy_sound.wav</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/SoundAssets/Click_sound.wav</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/SoundAssets/Losing_sound.wav</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/SoundAssets/medieval_background.wav</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/SoundAssets/Sword_sound.wav</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/SoundAssets/Unit_death_sound.wav</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/SoundAssets/Walking_sound.wav</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/SoundAssets/Win_Sound.wav</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/STONE1.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/SwordsmanSaga.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/SwordsmanSagaDark.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/town_hall.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/TOWNHALL.png</File>
+    <File>C:/Users/tyler/OneDrive/Documents/Uni/Sopra/sopra06/Swordsman Saga/Content/Victory.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

@@ -1,0 +1,136 @@
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\swordsmen_map.tmx
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\enemy_barracks.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\enemy_barracks_preview.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\enemy_barracks_selected_to_be_attacked.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\enemy_barrack_being_build.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\enemy_lumber_camp.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\enemy_lumber_camp_being_build.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\enemy_lumber_camp_preview.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\enemy_lumber_camp_selected_to_be_attacked.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\enemy_stonequarry.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\enemy_stonequarry_being_build.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\enemy_stonequarry_preview.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\enemy_stonequarry_selected_to_be_attacked.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\enemy_townhall.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\enemy_townhall_selected_to_be_attacked.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\friendly_barracks.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\friendly_barracks_being_built.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\friendly_barracks_being_built_selected.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\friendly_barracks_preview.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\friendly_barracks_selected.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\friendly_lumbercamp.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\friendly_lumbercamp_being_built.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\friendly_lumbercamp_being_built_selected.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\friendly_lumbercamp_preview.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\friendly_lumbercamp_selected.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\friendly_stonequarry - Copy.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\friendly_stonequarry.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\friendly_stonequarry_being_built.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\friendly_stonequarry_being_built_selected.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\friendly_stonequarry_preview.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\friendly_stonequarry_selected.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\friendly_townhall.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\friendly_townhall_selected - Copy.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\Buildings\friendly_townhall_selected.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\circle.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\GameObjectAssets\Buildings\enemy_lumber_camp_invis.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\GameObjectAssets\Buildings\enemy_stonequarry_invis.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\GameObjectAssets\Buildings\enemy_townhall_invis.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\GameObjectAssets\Buildings\friendly_lumbercamp_invis.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\GameObjectAssets\Buildings\friendly_stonequarry_invis.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\GameObjectAssets\Buildings\friendly_townhall_invis.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\GameObjectAssets\Units\enemy_archer.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\GameObjectAssets\Units\enemy_knight.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\GameObjectAssets\Units\enemy_swordsman.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\GameObjectAssets\Units\enemy_worker.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\GameObjectAssets\Units\friendly_archer.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\GameObjectAssets\Units\friendly_archer_is_selected.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\GameObjectAssets\Units\friendly_knight.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\GameObjectAssets\Units\friendly_knight_is_selected.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\GameObjectAssets\Units\friendly_swordsman.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\GameObjectAssets\Units\friendly_swordsman_is_selected.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\GameObjectAssets\Units\friendly_worker.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\GameObjectAssets\Units\friendly_worker_is_selected.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\icons\icon_barracks.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\icons\icon_lumbercamp.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\icons\icon_stonequarry.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\stone.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\stone_is_being_attacked.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\tree.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\tree_selected_is_being_attacked.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\2DAssets\wood.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\background.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\basic_font.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\bullet.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\bulletSelected.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\Button.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\ButtonHover.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\ButtonNew.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\ButtonNewAchievement.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\ButtonNewHover.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\Defeat.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\ExtraBackground.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\Floor.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\Fonts\Arial32.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\Lumber-Camp-Sound.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\Mining-Camp-Sound.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\pine-half04.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\pine-half05.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\pine-none03.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\pine-none06.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\Scroll.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\Scrollbar.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\SoundAssets\Arrow_sound.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\SoundAssets\background_music.ogg
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\SoundAssets\background_music.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\SoundAssets\Barracks_sound.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\SoundAssets\basic_soundeffect.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\SoundAssets\Building_destroy_sound.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\SoundAssets\Click_sound.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\SoundAssets\Losing_sound.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\SoundAssets\medieval_background.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\SoundAssets\Sword_sound.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\SoundAssets\Unit_death_sound.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\SoundAssets\Walking_sound.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\SoundAssets\Win_Sound.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\STONE1.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\SwordsmanSaga.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\SwordsmanSagaDark.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\TOWNHALL.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\town_hall.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\Victory.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\Floor_Grass_02-256x128.tsx
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\pine-half04.tsx
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\pine-half05.tsx
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\pine-none032.tsx
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\pine-none062.tsx
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\STONE1.tsx
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Content\TOWNHALL.tsx
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Swordsman Saga.exe
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Swordsman Saga.deps.json
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Swordsman Saga.runtimeconfig.json
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Swordsman Saga.dll
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Swordsman Saga.pdb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\MonoGame.Extended.dll
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\MonoGame.Framework.dll
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\Newtonsoft.Json.dll
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\TiledCS.dll
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\runtimes\linux-x64\native\libopenal.so.1
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\runtimes\osx\native\libSDL2.dylib
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\runtimes\osx\native\libopenal.1.dylib
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\runtimes\win-x64\native\SDL2.dll
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\runtimes\win-x64\native\soft_oal.dll
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\runtimes\win-x86\native\SDL2.dll
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Release\net6.0\runtimes\win-x86\native\soft_oal.dll
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\obj\Release\net6.0\Swordsman Saga.csproj.AssemblyReference.cache
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\obj\Release\net6.0\Swordsman Saga.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\obj\Release\net6.0\Swordsman Saga.AssemblyInfoInputs.cache
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\obj\Release\net6.0\Swordsman Saga.AssemblyInfo.cs
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\obj\Release\net6.0\Swordsman Saga.csproj.CoreCompileInputs.cache
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\obj\Release\net6.0\Swordsman Saga.csproj.CopyComplete
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\obj\Release\net6.0\Swordsman Saga.dll
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\obj\Release\net6.0\refint\Swordsman Saga.dll
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\obj\Release\net6.0\Swordsman Saga.pdb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\obj\Release\net6.0\Swordsman Saga.genruntimeconfig.cache
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\obj\Release\net6.0\ref\Swordsman Saga.dll
