@@ -56,7 +56,6 @@ class FightManager
     
     public void SetTargetForAttacker(IUnit attacker, IAttackableObject target)
      {
-        return;
          if (!mAttackerTargetMapping.ContainsKey(attacker))
          {
              mAttackerTargetMapping.Add(attacker, target);
@@ -71,14 +70,11 @@ class FightManager
     {
         counterForPathfinder -= gameTime.ElapsedGameTime.Milliseconds;
         counterForScanning -= gameTime.ElapsedGameTime.Milliseconds;
-
-        //long endTime = DateTimeOffset.Now.ToUnixTimeMilliseconds() + 4;
+        
 
         // for all Attackers, check if Target is in attack range
         foreach (var pair in mAttackerTargetMapping)
         {
-            return;
-            //if (DateTimeOffset.Now.ToUnixTimeMilliseconds() > endTime) { break; }
             if (!pair.Key.IsAttacking())
             {
                 if (pair.Key.IsInAttackRange(pair.Value.Position))
@@ -121,7 +117,6 @@ class FightManager
         // for all units doing attack move
         foreach (var pair in mAttackerDestinationMapping)
         {
-            return;
             IUnit unit = pair.Key;
             // skip if unit has a target
             if (mAttackerTargetMapping.ContainsKey(unit))
@@ -147,14 +142,15 @@ class FightManager
                 }
             }
         }
-        return;
+
         if (counterForScanning <= 0)
         {
             counterForScanning = 500;
             // all units that are doing nothing scan for auto attacking target 
             foreach (var gameObject in mObjectHandler.Objects)
             {
-                if (gameObject.Value is IUnit unit && unit.Action == 0)
+                IUnit unit = gameObject.Value as IUnit;
+                if (unit is not null && unit.Action == 0)
                 {
                     IAttackableObject target = ScanForTarget(unit, false, false);
                     if (target is not null) mAttackerTargetMapping[unit] = target;
@@ -166,7 +162,6 @@ class FightManager
 
     public void RemoveAttackers(Dictionary<string, ISelectableObject> attackers)
     {
-        return;
         foreach (var attacker in attackers)
         {
             var unit = attacker.Value as IUnit;
@@ -176,7 +171,6 @@ class FightManager
 
     public void RemoveAttacker(IUnit attacker)
     {
-        return;
         if (mAttackerTargetMapping.ContainsKey(attacker))
         {
             mAttackerTargetMapping.Remove(attacker);
@@ -185,7 +179,6 @@ class FightManager
 
     public void RemoveAttackMoveAttacker(IUnit unit)
     {
-        return;
         if (mAttackerDestinationMapping.ContainsKey(unit))
         {
             mAttackerDestinationMapping.Remove(unit);
@@ -194,7 +187,6 @@ class FightManager
 
     public void AddAttackMoveAttacker(IUnit unit, Vector2 destination)
     {
-        return;
             if (!mAttackerDestinationMapping.ContainsKey(unit))
             {
                 mObjectHandler.QueueMove(unit, destination, false);
@@ -227,7 +219,6 @@ class FightManager
 
     public void DoDamage(IUnit attacker)
     {
-        return;
         if (mAttackerTargetMapping.ContainsKey(attacker)) 
         {
             // this allows workers to do more damage to trees and stones
@@ -253,7 +244,6 @@ class FightManager
 
     public void RemoveTarget(IAttackableObject target)
     {
-        return;
         var keysToRemove = mAttackerTargetMapping.Where(kvp => kvp.Value == target)
             .Select(kvp => kvp.Key)
             .ToList();
@@ -267,7 +257,6 @@ class FightManager
     
     public IAttackableObject ScanForTarget(IUnit attacker, bool isMapObjectOk, bool onlyTargetBuildings)
     {
-        return null;
         int rangeInGridSquares = (attacker is IMelee) ? 1 : 2;
         
         var targetSquares = new HashSet<int>{mGrid.TranslateToGrid(attacker.Position)};

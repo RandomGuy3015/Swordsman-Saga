@@ -24,7 +24,6 @@ C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\obj\Debug\net
 C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\obj\Debug\net6.0\Swordsman Saga.AssemblyInfoInputs.cache
 C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\obj\Debug\net6.0\Swordsman Saga.AssemblyInfo.cs
 C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\obj\Debug\net6.0\Swordsman Saga.csproj.CoreCompileInputs.cache
-C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\obj\Debug\net6.0\Swordsman Saga.csproj.CopyComplete
 C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\obj\Debug\net6.0\Swordsman Saga.dll
 C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\obj\Debug\net6.0\refint\Swordsman Saga.dll
 C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\obj\Debug\net6.0\Swordsman Saga.pdb
@@ -134,3 +133,4 @@ C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Debug\net
 C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Debug\net6.0\Content\2DAssets\GameObjectAssets\Units\enemy_worker.xnb
 C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Debug\net6.0\Content\2DAssets\GameObjectAssets\Units\friendly_worker.xnb
 C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\bin\Debug\net6.0\Content\2DAssets\GameObjectAssets\Units\friendly_worker_is_selected.xnb
+C:\Users\tyler\OneDrive\Documents\Uni\Sopra\sopra06\Swordsman Saga\obj\Debug\net6.0\Swordsma.D3570397.Up2Date

@@ -46,15 +46,21 @@ class LumberCamp : IResourceBuilding
     private double mResourcetime = 0;
     private bool mUpgrading = false;
 
-    public void UpgradeBuilding()
+    public bool UpgradeBuilding()
     {
-        mUpgrading = true;
-        mResourcetime = 0;
+        if (ResourceHud.WoodCount >= UpgradeCost.X && ResourceHud.StoneCount >= UpgradeCost.Y)
+        {
+            mUpgrading = true;
+            ResourceHud.UseResources(UpgradeCost, Team);
+            mResourcetime = 0;
+            return true;
+        }
+        return false;
     }
     public SoundManager Sound { get; set; }
 
 
-    public LumberCamp(string id, int x, int y, int player, DynamicContentManager contentManager, FightManager fightManager, StatisticsManager statisticsManager = null)
+    public LumberCamp(string id, int x, int y, int player, DynamicContentManager contentManager, FightManager fightManager, StatisticsManager statisticsManager)
     {
         if (id == null)
         {
@@ -69,7 +75,7 @@ class LumberCamp : IResourceBuilding
         Position = new Vector2(x, y);
         ((IGameObject)this).InitializeRectangles(100, 100, 50, 50);
         // nur irgendwelche Beispielwerte
-        MaxHealth = 400;
+        MaxHealth = 250;
         Health = MaxHealth;
         Team = player;
         WoodGeneration = 5;
@@ -121,14 +127,17 @@ class LumberCamp : IResourceBuilding
 
         if (mResourcetime >= 10 && mUpgrading)
         {
-            ResourceHud.WoodCount -= (int)UpgradeCost.X;
-            ResourceHud.StoneCount -= (int)UpgradeCost.Y;
-            WoodGeneration = (int)((float)WoodGeneration * 1.1f) + 5;
+            WoodGeneration = (int)((float)WoodGeneration * 1.2f) + 5;
             UpgradeCost += new Vector2(80, 120);
             Level += 1;
             mUpgrading = false;
             mResourcetime = 0;
         }
+    }
+
+    public bool IsUpgrading()
+    {
+        return mUpgrading;
     }
 
     void IDataPersistence.SaveData(ref GameData data)

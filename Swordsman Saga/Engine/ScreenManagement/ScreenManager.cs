@@ -53,7 +53,7 @@ namespace Swordsman_Saga.Engine.ScreenManagement
         {
             IScreen screen = CreateScreen<T>(newgame, savemenu, techdemo, win, difficulty);
             mScreenStack.Add(screen);
-            if (screen is WorldScreen)
+            /*if (screen is WorldScreen)
             {
                 if (newgame)
                 {
@@ -61,9 +61,9 @@ namespace Swordsman_Saga.Engine.ScreenManagement
                 }
                 else
                 {
-                    DataPersistenceManager.Instance.LoadGame(true);
+                    DataPersistenceManager.Instance.LoadGame(false);
                 }
-            }
+            }*/
         }
 
         private IScreen CreateScreen<T>(bool newgame, bool savemenu, bool techdemo, bool win, int difficulty)

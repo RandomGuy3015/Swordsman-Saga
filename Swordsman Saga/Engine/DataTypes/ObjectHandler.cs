@@ -104,7 +104,6 @@ namespace Swordsman_Saga.Engine.DataTypes
             ID = gameData.mMoveGameObjects[count];
             Target = gameData.mMoveTarget[count];
             MoveType = gameData.mMoveMoveType[count];
-            Self = DataPersistenceManager.Instance.FindObject(ID);
         }
     }
 
@@ -141,6 +140,7 @@ namespace Swordsman_Saga.Engine.DataTypes
             {
                 Move move = new();
                 move.LoadData(gameData, i);
+                DataPersistenceManager.Instance.SetSelfMove(move);
                 mNextMoves.Enqueue(move);
             }
 
@@ -148,6 +148,7 @@ namespace Swordsman_Saga.Engine.DataTypes
             {
                 Move move = new();
                 move.LoadData(gameData, i);
+                DataPersistenceManager.Instance.SetSelfMove(move);
                 mNextMoves.Enqueue(move);
             }
         }
@@ -167,6 +168,9 @@ namespace Swordsman_Saga.Engine.DataTypes
         // The max time used per frame, in miliseconds.
         readonly ulong mBatchLength;
 
+        // Our random machine.
+        readonly private Random mRandom;
+
         private readonly SoundManager mSoundManager;
         private readonly DiamondGrid mGrid;
         private readonly AStarPathfinder mPathfinder;
@@ -178,9 +182,10 @@ namespace Swordsman_Saga.Engine.DataTypes
         public ObjectHandler(SoundManager soundManager, DiamondGrid grid, AStarPathfinder pathfinder, ResourceHud resourceHud)
         {
             Objects = new Dictionary<string, IGameObject>();
-            mMoves = new Queue<Move>();
-            mNextMoves = new Queue<Move>();
+            mMoves = new Queue<Move>(3000);
+            mNextMoves = new Queue<Move>(500);
             SelectedObjects = new Dictionary<string, ISelectableObject>();
+            mRandom = new ();
 
 
             mBatchLength = 1;
@@ -329,7 +334,7 @@ namespace Swordsman_Saga.Engine.DataTypes
 
             // Work through moves until the allotted time has passed
             // This was bugged the whole time because gameTime is shit...
-            long endTime = DateTimeOffset.Now.ToUnixTimeMilliseconds() + 6;
+            long endTime = DateTimeOffset.Now.ToUnixTimeMilliseconds() + 30;
 
 
             //Debug.WriteLine($"Queue before draw: {mMoves.Count}");
@@ -639,18 +644,18 @@ namespace Swordsman_Saga.Engine.DataTypes
                     {
                         if (!movingObject1.IsMoving)
                         {
+                            self.PreventCollision = true;
+                            movingObject1.PreventCollision = true;
                             Vector2 newTarget = movingObject1.Position;
                             movingObject1.Goal = movingObject1.Position + GetPushDirection(self, movingObject1) * 50f;
-                            
-                            QueueMove(movingObject1, movingObject1.Goal, false);
+
+                            //QueueMove(movingObject1, movingObject1.Goal, false);
 
                         }
                     }
-                    if (self.AlreadyCollidedWith.Contains(collidableObject))
-                        continue; // Skip this collision
+
                     if (self.IsMoving && collidableObject is IMovingObject movingObject)
                     {
-                        self.AlreadyCollidedWith.Add(collidableObject);
 
 
                         if (!movingObject.IsMoving)
@@ -663,8 +668,42 @@ namespace Swordsman_Saga.Engine.DataTypes
                             QueueMove(movingObject, movingObject.Destination, false);
 
                         }
-                    }
-                    else if (collidableObject is IStaticObject staticObject && !self.PreventCollision)
+                        else
+                        {
+                            if (IsOverlapSignificant(self, collidableObject))
+                            //if (self.HitboxRectangle.Intersects(movingObject.HitboxRectangle))
+                            {
+                                Vector2 directionToOther = movingObject.Position - self.Position;
+                                directionToOther.Normalize();
+                                Vector2 newPositionSelf = movingObject.Position += directionToOther * 3f;
+                                Vector2 newPositionOther = self.Position -= directionToOther * 3f;
+
+                                Vector2 newDestinationSelf = movingObject.Destination += directionToOther * 3f;
+                                Vector2 newDestinationother = self.Destination -= directionToOther * 3f;
+
+                                if (self.Path.Count() > 1)
+                                {
+                                    //QueueMove(self, self.Path.Last(), false);
+                                }
+                                else if (self.Path.Count() == 1 && !self.PreventCollision)
+                                {
+                                    self.StopMoving();
+
+                                }
+                                if (movingObject.Path.Count() > 1)
+                                {
+                                    //QueueMove(movingObject, movingObject.Path.Last(), false);
+                                }
+                                else if (movingObject.Path.Count() == 1 && !movingObject.PreventCollision)
+                                {
+                                    movingObject.StopMoving();
+                                }
+                                //movingObject.Path.Insert(0, newPositionOther);
+
+                            }
+                        }
+                        }
+                    else if (collidableObject is IStaticObject staticObject)
                     {
                         self.LastCollisionTime = DateTime.Now;
                         if (!self.IsMoving)
@@ -715,12 +754,10 @@ namespace Swordsman_Saga.Engine.DataTypes
             }
             else if (self.CollisionCount > 10 && (DateTime.Now - self.LastCollisionTime).TotalSeconds < 1)
             {
-                if (self.Path.Count() >= 1) {
-                    self.Path[0] = self.Position;
+                    self.Destination = self.Position;
                     self.StopMoving();
 
                     self.CollisionCount = 0;
-                }
 
             }
             else

@@ -60,6 +60,7 @@ namespace Swordsman_Saga.Engine.DataPersistence.Data
         public TimeSpan mTimeSinceGameStart;
         public int mAIWoodCount;
         public int mAIStoneCount;
+        public int mDifficulty;
 
         //Task
         public Dictionary<int, string> mTasks;

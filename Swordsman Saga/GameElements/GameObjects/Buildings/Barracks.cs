@@ -57,7 +57,7 @@ class Barracks : IBuilding
     public float mCurrentTrainingTime; // time since the current unit started training
 
     Dictionary<TroopType, float> mTrainingTimes = new Dictionary<TroopType, float>() {
-    { TroopType.Swordsman, 25.0f }, { TroopType.Archer, 40.0f }, { TroopType.Knight, 60.0f }, {TroopType.Worker, 15.0f}};
+    { TroopType.Swordsman, 17.0f }, { TroopType.Archer, 24.0f }, { TroopType.Knight, 50.0f }, {TroopType.Worker, 12.0f}};
 
     public Barracks(string id, int x, int y, int player, DynamicContentManager contentManager, FightManager fightManager)
     {
@@ -73,7 +73,7 @@ class Barracks : IBuilding
         Position = new Vector2(x, y);
         FightManager = fightManager;
         ((IGameObject)this).InitializeRectangles(100, 100, 50, 50);
-        MaxHealth = 500;
+        MaxHealth = 300;
         Health = MaxHealth;
         
         CompletionTimer = 1000;

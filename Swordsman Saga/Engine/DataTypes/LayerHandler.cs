@@ -34,7 +34,7 @@ namespace Swordsman_Saga.Engine.DataTypes
             mMax = 10750;
             
             //mSortedDictionary = new SortedDictionary<long, IGameObject>();
-            mPriorityQueue = new PriorityQueue<IGameObject, float>();
+            mPriorityQueue = new PriorityQueue<IGameObject, float>(4000);
             //mLayerStack = new SortedDictionary<float, IGameObject>();
             
             double help1 = Math.Cos(mRotation) * mMax + Math.Sin(mRotation) * mMax / 2;

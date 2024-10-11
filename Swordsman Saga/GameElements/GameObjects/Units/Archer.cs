@@ -89,7 +89,7 @@ class Archer : IRanged
         Path = new List<Vector2>();
         // example values 
         Speed = 0.075f;
-        Damage = 15;
+        Damage = 13;
         MaxHealth = 60;
         Health = MaxHealth;
         AttackRange = 300;

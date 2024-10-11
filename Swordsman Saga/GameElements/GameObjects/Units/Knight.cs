@@ -94,9 +94,9 @@ class Knight : IMelee
         Destination = new Vector2(x, y);
         Path = new List<Vector2>();
         // nur irgendwelche Beispielwerte
-        Speed = 0.2f;
-        Damage = 10;
-        MaxHealth = 150;
+        Speed = 0.22f;
+        Damage = 12;
+        MaxHealth = 180;
         Health = MaxHealth;
         AttackRange = 100;
         Team = player;

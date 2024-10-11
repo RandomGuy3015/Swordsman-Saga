@@ -260,7 +260,7 @@ namespace Swordsman_Saga.GameElements.Screens
         private void TechDemo()
         {
             // TODO: change to specific TechDemo World when exists
-            ScreenManager.AddScreen<WorldScreen>(true, false, true, false, 0);
+            ScreenManager.AddScreen<WorldScreen>(true, false, true, false, 2);
         }
         private void Exit()
         {

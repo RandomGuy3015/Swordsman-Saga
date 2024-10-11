@@ -59,8 +59,8 @@ class Worker : IMelee
     public bool IsColliding { get; set; }
     public SoundManager Sound { get; set; }
     public bool IsBuilding { get; set; }
-    public IGameObject BuildingBeingBuilt { get; set; }
-    
+    public int BuildingBuildState { get; set; }
+    public IBuilding BuildingBeingBuilt { get; set; }
     public bool IsMovingToBuild { get; set; }
     
     public int Action { get; set; }
@@ -111,6 +111,7 @@ class Worker : IMelee
     {
         if (BuildingBeingBuilt != null)
         {
+            BuildingBuildState = BuildingBeingBuilt.BuildState;
             if (IsMovingToBuild && Vector2.Distance(BuildingBeingBuilt.Position, Position) < 100)
             {
                 // as soon as in building range, stop moving and start building

@@ -26,6 +26,7 @@ namespace Swordsman_Saga.GameElements.Screens.HUDs
         private GraphicsDeviceManager mGraphicsDeviceManager;
         private InputManager mInputManager;
         private SoundManager mSoundManager;
+        private ResourceHud mResourceHud;
 
         public BuildingType SelectedBuildingType { get; private set; }
         public int SelectedBuildingSize { get; private set; }
@@ -36,23 +37,24 @@ namespace Swordsman_Saga.GameElements.Screens.HUDs
         public enum BuildingType
         {
             Quarry,
-            Camp,
+            LumberCamp,
             Barracks,
         }
         
-        public BuildingSelectionOverlay(DynamicContentManager contentManager, GraphicsDeviceManager graphicsDeviceManager, InputManager inputManager, SoundManager soundManager)
+        public BuildingSelectionOverlay(DynamicContentManager contentManager, GraphicsDeviceManager graphicsDeviceManager, InputManager inputManager, SoundManager soundManager, ResourceHud resourceHud)
         {
             mSoundManager = soundManager;
             mInputManager = inputManager;
             mContentManager = contentManager;
             mGraphicsDeviceManager = graphicsDeviceManager;
+            mResourceHud = resourceHud;
             mButtonSize = new Vector2(150, 60);
             Initialize();
         }
 
         public Vector2 GetBuildingCost(int buildingType)
         {
-                return mCostVectors[buildingType];
+            return mCostVectors[buildingType];
         }
 
         private void Initialize()
@@ -74,7 +76,18 @@ namespace Swordsman_Saga.GameElements.Screens.HUDs
             {
                 int buttonX = startX + ((int)buildingType * ((int)mButtonSize.X + 10));
                 BuildingType localBuildingType = buildingType; // create a local copy
-                RecruitementButton button = new RecruitementButton( new Vector2(buttonX, startY), mButtonSize, (int)mCostVectors[(int)buildingType].X, (int)mCostVectors[(int)buildingType].Y, mContentManager, mInputManager, buildingType.ToString());
+
+                RecruitementButton button;
+
+                if (buildingType == BuildingType.LumberCamp)
+                {
+                    button = new RecruitementButton(new Vector2(buttonX, startY), mButtonSize, (int)mCostVectors[(int)buildingType].X, (int)mCostVectors[(int)buildingType].Y, mContentManager, mInputManager, "Lumber Camp");
+                }
+                else
+                {
+                    button = new RecruitementButton(new Vector2(buttonX, startY), mButtonSize, (int)mCostVectors[(int)buildingType].X, (int)mCostVectors[(int)buildingType].Y, mContentManager, mInputManager, buildingType.ToString());
+                }
+
                 mButtons.Add(button);
                 button.Clicked += () => { GetButtonClickHandler(localBuildingType); }; // use the local copy
             }
@@ -95,8 +108,8 @@ namespace Swordsman_Saga.GameElements.Screens.HUDs
                     SelectedBuildingSize = 1;
                     mSoundManager.PlaySound("SoundAssets/Click_sound", 1, false, false);
                     break;
-                case BuildingType.Camp:
-                    SelectedBuildingType = BuildingType.Camp;
+                case BuildingType.LumberCamp:
+                    SelectedBuildingType = BuildingType.LumberCamp;
                     SelectedBuildingSize = 1;
                     mSoundManager.PlaySound("SoundAssets/Click_sound", 1, false, false);
                     break;
@@ -116,7 +129,7 @@ namespace Swordsman_Saga.GameElements.Screens.HUDs
             {
                 return 0;
             }
-            else if (SelectedBuildingType == BuildingType.Camp)
+            else if (SelectedBuildingType == BuildingType.LumberCamp)
             {
                 return 1;
             }
@@ -133,10 +146,21 @@ namespace Swordsman_Saga.GameElements.Screens.HUDs
         public void Update(GameTime gameTime, InputState inputState)
         {
             if (!IsVisiblebtn) { return; }
+
+            if (mCostVectors[0].X > mResourceHud.WoodCount || mCostVectors[0].Y > mResourceHud.StoneCount) { mButtons[0].ChangeText("No Resources!"); }
+            else { mButtons[0].ChangeText("Quarry"); }
+
+            if (mCostVectors[1].X > mResourceHud.WoodCount || mCostVectors[1].Y > mResourceHud.StoneCount) { mButtons[1].ChangeText("No Resources!"); }
+            else { mButtons[1].ChangeText("Lumber Camp"); }
+
+            if (mCostVectors[2].X > mResourceHud.WoodCount || mCostVectors[2].Y > mResourceHud.StoneCount) { mButtons[2].ChangeText("No Resources!"); }
+            else { mButtons[2].ChangeText("Barracks"); }
+
             foreach (var button in mButtons)
             {
                 button.Update(inputState);
             }
+
         }
 
         public void Draw(SpriteBatch spriteBatch)

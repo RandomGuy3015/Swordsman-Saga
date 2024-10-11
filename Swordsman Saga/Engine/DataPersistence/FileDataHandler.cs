@@ -103,7 +103,10 @@ namespace Swordsman_Saga.Engine.DataPersistence
             catch (Exception e)
             {
                 // Consider logging the error
-                Console.WriteLine("Error occurred when trying to save data to file: " + fullPath + "\n" + e);
+                if (Debugger.IsAttached)
+                {
+                    Console.WriteLine("Error occurred when trying to save data to file: " + fullPath + "\n" + e);
+                }
             }
         }
 

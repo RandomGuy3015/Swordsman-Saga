@@ -134,7 +134,7 @@ namespace Swordsman_Saga.GameElements.Screens
                 mInputManager,
                 mSoundManager,
                 mObjectHandler);
-            mBuildingSelectionOverlay = new BuildingSelectionOverlay(mContentManager, mGraphicsDeviceManager, mInputManager, mSoundManager);
+            mBuildingSelectionOverlay = new BuildingSelectionOverlay(mContentManager, mGraphicsDeviceManager, mInputManager, mSoundManager, mResourceHud);
             mBuildingPreviewHandler = new BuildingPreviewHandler(mInputManager, mGrid, mBuildingSelectionOverlay, mResourceHud);
             mFpsCounter = new FpsCounter(ScreenManager, mContentManager);
             mCamera = new Camera(mGraphicsDeviceManager, mInputManager);
@@ -198,7 +198,14 @@ namespace Swordsman_Saga.GameElements.Screens
 
                 if (gameObject is Barracks barracks)
                 {
-                    SetupBarracks(barracks);
+                    if (barracks.Team == 1)
+                    {
+                        mAIHandler.SetupBarracks(barracks);
+                    }
+                    else
+                    {
+                        SetupBarracks(barracks);
+                    }
                 }
 
             }
@@ -210,10 +217,12 @@ namespace Swordsman_Saga.GameElements.Screens
             {
                 mObjectHandler.QueueCreateOverwrite(mFriendlyTownHall);
                 mObjectHandler.QueueCreateOverwrite(mEnemyTownHall);
+                
             }
 
             // Quick fix for this chicken-and-egg problem
             mAIHandler.LoadTownHall(mEnemyTownHall);
+
 
             mFightManager.Initialize(mPathfinder, mGrid, mObjectHandler, this);
         }
@@ -366,7 +375,10 @@ namespace Swordsman_Saga.GameElements.Screens
                     }
                     else if (mSelectedBuilding is IResourceBuilding resourceBuilding)
                     {
-                        mResourceBuildingOverlay.IsVisiblebtn = true;
+                        if (mSelectedBuilding.BuildState == 2)
+                        {
+                            mResourceBuildingOverlay.IsVisiblebtn = true;
+                        }
                         mBuildingSelectionOverlay.IsVisiblebtn = false;
                         mTroopSelectionOverlay.IsVisiblebtn = false;
                         mResourceBuildingOverlay.SetSelectedBuilding(resourceBuilding);
@@ -457,6 +469,10 @@ namespace Swordsman_Saga.GameElements.Screens
                 {
                     if (kvPair.Value is IUnit unit)
                     {
+                        if (unit is IMovingObject movingObject)
+                        {
+                            movingObject.IsMoving = true;
+                        }
                         unit.PreventCollision = true;
                         mFightManager.AddAttackMoveAttacker(unit, worldMousePosition);
                     }
@@ -481,7 +497,7 @@ namespace Swordsman_Saga.GameElements.Screens
             if (mInputManager.IsActionInputted(inputState, ActionType.DebugSpawnAlliedSwordsman) && mDebugKeys)
             {
                 
-                /*switch (mTroopSelectionOverlay.SelectedTroopType)
+                switch (mTroopSelectionOverlay.SelectedTroopType)
                 {
                     case TroopType.Swordsman:
                         mObjectHandler.QueueCreate(new Swordsman(null, (int)worldMousePosition.X, (int)worldMousePosition.Y, 0, mContentManager, mFightManager, mStatisticsManager));
@@ -492,11 +508,11 @@ namespace Swordsman_Saga.GameElements.Screens
                     case TroopType.Knight:
                         mObjectHandler.QueueCreate(new Knight(null, (int)worldMousePosition.X - 20, (int)worldMousePosition.Y - 20, 0, mContentManager, mFightManager, mStatisticsManager));
                         break;
-                }*/
-                for (int i = 0; i < 1000; i++)
+                }
+                /*for (int i = 0; i < 1000; i++)
                 {
                     mObjectHandler.QueueCreate(new Swordsman(null, (int)worldMousePosition.X, (int)worldMousePosition.Y, 0, mContentManager, mFightManager, mStatisticsManager));
-                }
+                }*/
             }
             
             // Spawn Enemy Unit at mouse location (F3)
@@ -517,6 +533,84 @@ namespace Swordsman_Saga.GameElements.Screens
                         break;
                     case TroopType.Knight:
                         mObjectHandler.QueueCreate(new Knight(null, (int)worldMousePosition.X - 20, (int)worldMousePosition.Y - 20, 1, mContentManager, mFightManager, mStatisticsManager));
+                        break;
+                }
+            }
+            //Spawn 100 Swordsman (F9) on non Filled Squares
+            if (mInputManager.IsActionInputted(inputState, ActionType.DebugSaveMovingObjects) && mDebugKeys)
+            {
+                if (Debugger.IsAttached)
+                {
+                    Debug.WriteLine("SPAWNING Friendly UNITs");
+                }
+                switch (mTroopSelectionOverlay.SelectedTroopType)
+                {
+                    case TroopType.Swordsman:
+                        var count = 0;
+                        var row = 0;
+                        for (int i = 0; i < 100; i++)
+                        {
+                            if (count == 10)
+                            {
+                                row++;
+                                count = 0;
+                            }
+
+                            var position =
+                                mGrid.TranslateFromGrid(mGrid.TranslateToGrid(worldMousePosition) + i + row * 74);
+                            if (!mGrid.CheckIfGridLocationIsFilledFromPixel(position))
+                            {
+                                mObjectHandler.QueueCreate(new Swordsman(null,
+                                    (int)position.X,
+                                    (int)position.Y,
+                                    0,
+                                    mContentManager,
+                                    mFightManager,
+                                    mStatisticsManager));
+                            }
+
+                            count++;
+                        }
+                        
+                        break;
+                }
+            }
+            //Spawn 100 Enemy Swordsman (F10)
+            if (mInputManager.IsActionInputted(inputState, ActionType.DebugLoadMovingObjects) && mDebugKeys)
+            {
+                if (Debugger.IsAttached)
+                {
+                    Debug.WriteLine("SPAWNING Enemy UNITs");
+                }
+                switch (mTroopSelectionOverlay.SelectedTroopType)
+                {
+                    case TroopType.Swordsman:
+                        var count = 0;
+                        var row = 0;
+                        for (int i = 0; i < 100; i++)
+                        {
+                            if (count == 10)
+                            {
+                                row++;
+                                count = 0;
+                            }
+
+                            var position =
+                                mGrid.TranslateFromGrid(mGrid.TranslateToGrid(worldMousePosition) + i + row * 74);
+                            if (!mGrid.CheckIfGridLocationIsFilledFromPixel(position))
+                            {
+                                mObjectHandler.QueueCreate(new Swordsman(null,
+                                    (int)position.X,
+                                    (int)position.Y,
+                                    1,
+                                    mContentManager,
+                                    mFightManager,
+                                    mStatisticsManager));
+                            }
+
+                            count++;
+                        }
+
                         break;
                 }
             }
@@ -547,7 +641,7 @@ namespace Swordsman_Saga.GameElements.Screens
                     case BuildingSelectionOverlay.BuildingType.Quarry:
                         newBuilding = new Quarry(null, snappedToGridDiamond.X, snappedToGridDiamond.Y, 1, mContentManager, mFightManager, mStatisticsManager);
                         break;
-                    case BuildingSelectionOverlay.BuildingType.Camp:
+                    case BuildingSelectionOverlay.BuildingType.LumberCamp:
                         newBuilding = new LumberCamp(null, snappedToGridDiamond.X, snappedToGridDiamond.Y, 1, mContentManager, mFightManager, mStatisticsManager);
                         break;
                         // Add cases for other building types
@@ -712,6 +806,8 @@ namespace Swordsman_Saga.GameElements.Screens
                 // Adds the correct building to mGameObjects
 
                 Vector2 target = new (snappedToGridDiamond.X,snappedToGridDiamond.Y);
+
+                IBuilding building = null;
                 
                 switch (buildingType)
                 {
@@ -719,6 +815,7 @@ namespace Swordsman_Saga.GameElements.Screens
                         if (mGrid.GetStaticObjectFromPixel(target) is Stone && (mResourceHud.UseResources(mBuildingSelectionOverlay.GetBuildingCost(0), 0)))
                         {
                             Quarry quarry = new (null, (int)target.X, (int)target.Y, 0, mContentManager, mFightManager, mStatisticsManager);
+                            building = quarry;
                             mObjectHandler.QueueCreateOverwrite(quarry);
                             quarry.ResourceHud = mResourceHud;
                             build = true;
@@ -728,6 +825,7 @@ namespace Swordsman_Saga.GameElements.Screens
                         if (mGrid.GetStaticObjectFromPixel(target) is Tree && mResourceHud.UseResources(mBuildingSelectionOverlay.GetBuildingCost(1), 0))
                         {
                             LumberCamp lumberCamp = new (null, (int)target.X, (int)target.Y, 0, mContentManager, mFightManager, mStatisticsManager);
+                            building = lumberCamp;
                             mObjectHandler.QueueCreateOverwrite(lumberCamp);
                             lumberCamp.ResourceHud = mResourceHud;
                             build = true;
@@ -737,6 +835,7 @@ namespace Swordsman_Saga.GameElements.Screens
                         if (mResourceHud.UseResources(mBuildingSelectionOverlay.GetBuildingCost(2), 0))
                         {
                             Barracks barracks = new (null, (int)target.X, (int)target.Y, 0, mContentManager, mFightManager);
+                            building = barracks;
                             mObjectHandler.QueueCreateOverwrite(barracks);
                             SetupBarracks(barracks);
                             barracks.ResourceHud = mResourceHud;
@@ -753,9 +852,9 @@ namespace Swordsman_Saga.GameElements.Screens
                         break;
                 }
 
-                if (build)
+                if (build && building != null)
                 {
-
+                    
                     // Assignes the building to grid
                    
                     // Closes the building overlay
@@ -769,8 +868,8 @@ namespace Swordsman_Saga.GameElements.Screens
                             if (worker.IsSelected)
                             {
                                 mObjectHandler.QueueMove((IGameObject)worker, new Vector2(target.X, target.Y), false);
-                                worker.IsMovingToBuild = true; 
-                                worker.BuildingBeingBuilt = mObjectHandler.Top();
+                                worker.IsMovingToBuild = true;
+                                worker.BuildingBeingBuilt = building;
                             }
                         }
                     }
@@ -792,28 +891,6 @@ namespace Swordsman_Saga.GameElements.Screens
 
             // -------------------------------------------------------------------------------------------
             // ----------------------------------   SAVE - LOAD   ----------------------------------------
-
-            // Save Gameobjects
-
-            if (mInputManager.IsActionInputted(inputState, ActionType.DebugSaveMovingObjects))
-            {
-                DataPersistenceManager.Instance.Update(mObjectHandler.Objects, mCamera, mAIHandler, mFightManager, mObjectHandler, mSoundManager);
-                DataPersistenceManager.Instance.SaveGame();
-            }
-
-
-            // Load Gameobjects
-
-            if (mInputManager.IsActionInputted(inputState, ActionType.DebugLoadMovingObjects))
-            {
-                DataPersistenceManager.Instance.Update(mObjectHandler.Objects, mCamera, mAIHandler, mFightManager, mObjectHandler, mSoundManager);
-                mObjectHandler.Objects.Clear();
-                mGrid.mGridContent.Clear();
-                foreach (IGameObject gameObject in DataPersistenceManager.Instance.LoadGame(true))
-                {
-                    mObjectHandler.QueueCreateOverwrite(gameObject);
-                }
-            }
         }
 
 
@@ -963,21 +1040,35 @@ namespace Swordsman_Saga.GameElements.Screens
         private void HandleBarracksSpawnMove(Vector2 location)
         {
 
-            const float radius = 50.0f;
+            List<IGameObject> nearbyObjects = new ();
 
-            var nearbyObjects = mGrid.mGridContent.Values
-                .SelectMany(cell => cell)
-                .Where(obj => Vector2.Distance(obj.Position, location) <= radius)
-                .ToList();
+            /* This seems to just push nearby workers away and isn't really needed
+            foreach (int loc in mGrid.GetNeighbors(mGrid.TranslateToGrid(location)))
+            {
+                if (mGrid.mGridContent.TryGetValue(loc, out List<IGameObject> objs))
+                {
+                    foreach (var obj in objs)
+                    {
+                        nearbyObjects.Add(obj);
+                    }
+                }
+            }
+            */
+
+            if (mGrid.mGridContent.TryGetValue(mGrid.TranslateToGrid(location), out List<IGameObject> objs2))
+            {
+                foreach (var obj in objs2)
+                {
+                    nearbyObjects.Add(obj);
+                }
+            }
+
 
             int stepsDown = 70;
 
             foreach (var obj in nearbyObjects)
             {
-                if (Debugger.IsAttached)
-                {
-                    Console.WriteLine(obj);
-                }
+
                 if (obj is IMovingObject movingObject)
                 {
                     Vector2 newPosition = new Vector2(movingObject.Position.X - 70, movingObject.Position.Y + stepsDown);

@@ -10,7 +10,10 @@ namespace Swordsman_Saga.Engine.ObjectManagement
     interface IResourceBuilding: IBuilding
     {
         Vector2 UpgradeCost { get; }
-        void UpgradeBuilding();
+        bool UpgradeBuilding();
+
+        bool IsUpgrading();
+
         int Level { get; }
 
     }

@@ -40,6 +40,8 @@ public class ResourceDisplay
         mAmount = amount;
     }
 
+    public int GetAmount() { return mAmount; }
+
     public void UpdatePosition(Vector2 position)
     {
         mTextureRectangle.X = (int)position.X;

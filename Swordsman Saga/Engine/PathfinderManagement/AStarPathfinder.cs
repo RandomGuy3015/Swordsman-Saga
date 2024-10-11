@@ -22,6 +22,9 @@ namespace Swordsman_Saga.Engine.PathfinderManagement
             var startSlot = mGrid.TranslateToGridV(start);
             var goalSlot = mGrid.TranslateToGridV(goal);
 
+            int maxIterations = 10000;
+
+
             // Adjust screen position to account for isometric distortion
             var realStartPos = new Vector2(start.X, start.Y * 2f);
             var realGoalPos = new Vector2(goal.X, goal.Y * 2f);
@@ -39,11 +42,24 @@ namespace Swordsman_Saga.Engine.PathfinderManagement
             Node nearestNode = startNode;
             var nearestDistance = startDistance;
 
+            var realGoalSlotPos = new Vector2(goalNode.Position.X, goalNode.Position.Y * 2f);
+
+
+            if (mGrid.CheckIfGridLocationIsFilledFromLoc(mGrid.GetInt(goalSlot)))
+            {
+                if ((int)Vector2.Distance(startSlot, goalSlot) <= 1.5d)
+                {
+                    path = new() { GetNearestOuterNavPoint(nearestNode, realGoalSlotPos) };
+                    return path;
+                }
+                maxIterations = Math.Clamp((int)Math.Pow(Vector2.Distance(startSlot, goalSlot), 1.5f), 50, 10000);
+            }
+
+
             // Add the start node to the open list
             openList.Add(startNode);
 
             // Loop until the open list is empty or maxIteration times
-            const int maxIterations = 10000;
             var n = 0;
             while (openList.Count > 0 &&  n < maxIterations)
             {
@@ -87,13 +103,15 @@ namespace Swordsman_Saga.Engine.PathfinderManagement
                     }
 
                     // Check if the neighbor is in the open list and if it has a lower G score
-                    if (openList.Contains(neighborNode) && neighborNode.G < currentNode.G)
+                    if (openList.Contains(neighborNode))
                     {
-                        openList.Remove(neighborNode);
+                        if (neighborNode.G < currentNode.G)
+                        {
+                            openList.Remove(neighborNode);
+                        }
                     }
-
                     // Add the neighbor to the open list if it's not there
-                    if (!openList.Contains(neighborNode))
+                    else
                     {
                         openList.Add(neighborNode);
                     }
@@ -109,7 +127,7 @@ namespace Swordsman_Saga.Engine.PathfinderManagement
             }
             // If no path to the goal is found, check if a nearest reachable node is available
             path = nearestNode.Parent is null ? new List<Vector2>() : RetracePath(nearestNode);
-            var realGoalSlotPos = new Vector2(goalNode.Position.X, goalNode.Position.Y * 2f);
+            
             path.Add(GetNearestOuterNavPoint(nearestNode, realGoalSlotPos));
             return path;
         }

@@ -74,10 +74,10 @@ namespace Swordsman_Saga.GameElements.Screens.HUDs
         {
             mCostVectors = new List<Vector2>();
             // Example costs, adjust as necessary
-            mCostVectors.Add(new Vector2(60, 60));  // Cost for Swordsman
-            mCostVectors.Add(new Vector2(80, 60)); // Cost for Archer
-            mCostVectors.Add(new Vector2(200, 200));// Cost for Knight
-            mCostVectors.Add(new Vector2(40, 40));// Cost for Worker
+            mCostVectors.Add(new Vector2(100, 100));  // Cost for Swordsman
+            mCostVectors.Add(new Vector2(110, 110)); // Cost for Archer
+            mCostVectors.Add(new Vector2(250, 250));// Cost for Knight
+            mCostVectors.Add(new Vector2(60, 60));// Cost for Worker
         }
         public Vector2 GetUnitCost(int troopType)
         {

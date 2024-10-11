@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Swordsman Saga")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7412da12ed0f02bdbf419f34083928753b2b85d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+edbee7d995d3406853eab3675ef5696cf5117d56")]
 [assembly: System.Reflection.AssemblyProductAttribute("Swordsman Saga")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Swordsman Saga")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

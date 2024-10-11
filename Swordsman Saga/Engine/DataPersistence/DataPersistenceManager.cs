@@ -18,6 +18,7 @@ using Swordsman_Saga.Engine.SoundManagement;
 using Swordsman_Saga.GameElements.GameObjects.Units;
 using Swordsman_Saga.GameElements.GameObjects.Buildings;
 using Swordsman_Saga.GameElements.Screens.HUDs;
+using Task = Swordsman_Saga.Engine.DataTypes.Task;
 
 
 namespace Swordsman_Saga.Engine.DataPersistence
@@ -290,7 +291,7 @@ namespace Swordsman_Saga.Engine.DataPersistence
                                 (int)mGameData.mObjectPosition[pair.Key].Y,
                                 mGameData.mUnitPlayer[pair.Key],
                                 DynamicContentManager.Instance,
-                                mFightManager);
+                                mFightManager, mStatisticsManager);
                             quarry.CompletionTimer = mGameData.mCompletionTimers[pair.Key];
                             quarry.BuildState = mGameData.mBuildStates[pair.Key];
                             quarry.StoneGeneration = mGameData.mStoneGeneration[pair.Key];
@@ -306,7 +307,7 @@ namespace Swordsman_Saga.Engine.DataPersistence
                                 (int)mGameData.mObjectPosition[pair.Key].Y,
                                 mGameData.mUnitPlayer[pair.Key],
                                 DynamicContentManager.Instance,
-                                mFightManager);
+                                mFightManager, mStatisticsManager);
                             lumberCamp.CompletionTimer = mGameData.mCompletionTimers[pair.Key];
                             lumberCamp.BuildState = mGameData.mBuildStates[pair.Key];
                             lumberCamp.WoodGeneration = mGameData.mWoodGeneration[pair.Key];
@@ -342,7 +343,7 @@ namespace Swordsman_Saga.Engine.DataPersistence
                 {
                     if (worker.mSearchForObject)
                     {
-                        worker.BuildingBeingBuilt = FindObject(mGameData.mBuildingBeingBuilt[worker.Id]);
+                        SetBuildingWorker(worker);
                     }
                 }
             }
@@ -360,16 +361,48 @@ namespace Swordsman_Saga.Engine.DataPersistence
             return mGameObjects;
         }
 
-        public IGameObject FindObject(string id)
+        public void SetBuildingWorker(Worker worker)
         {
             foreach (var gameObject in mGameObjects)
             {
-                if (gameObject.Id == id)
+                if (gameObject.Id == mGameData.mBuildingBeingBuilt[worker.Id])
                 {
-                    return gameObject;
+                    worker.BuildingBeingBuilt = (IBuilding)gameObject;
+                    Debug.WriteLine("Team: "+worker.Team);
+                    Debug.WriteLine(Object.ReferenceEquals(worker.BuildingBeingBuilt, gameObject));
                 }
             }
-            return null;
+        }
+        public void SetSelfMove(Move move)
+        {
+            foreach (var gameObject in mGameObjects)
+            {
+                if (gameObject.Id == move.ID)
+                {
+                    move.Self = gameObject;
+                }
+            }
+        }
+        public void SetSelfTask(Task task)
+        {
+            foreach (var gameObject in mGameObjects)
+            {
+                if (gameObject.Id == mGameData.mSelf[task.Id])
+                {
+                    task.Self = gameObject;
+                }
+            }
+        }
+
+        public void SetOtherTask(Task task)
+        {
+            foreach (var gameObject in mGameObjects)
+            {
+                if (gameObject.Id == mGameData.mOther[task.Id])
+                {
+                    task.Other = gameObject;
+                }
+            }
         }
         private List<IDataPersistence> FindAllDataPersistenceObjects(Dictionary<string, IGameObject> gameObjects)
         {

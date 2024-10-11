@@ -44,6 +44,17 @@ public class RecruitementButton
         CalculatePositions();
     }
 
+    public void ChangeText(string text)
+    {
+        mText = text;
+        CalculatePositions();
+    }
+
+    public Vector2 GetWoodStoneCost()
+    {
+        return new Vector2(mWood.GetAmount(), mStone.GetAmount());
+    }
+
     public void SetWoodStoneCost(Vector2 cost)
     {
         mWood.ChangeAmount((int)cost.X);

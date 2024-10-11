@@ -17,6 +17,7 @@ using static Swordsman_Saga.GameElements.Screens.HUDs.TroopSelectionOverlay;
 using static Swordsman_Saga.Engine.ObjectManagement.IUnit;
 using System.Collections;
 using System.Reflection.Metadata;
+using MonoGame.Extended.Timers;
 
 namespace Swordsman_Saga.Engine.DataTypes
 {
@@ -293,7 +294,7 @@ namespace Swordsman_Saga.Engine.DataTypes
                 
                 if (mDifficulty == -1)
                 {
-                    throw new Exception("Difficulty was not properly loaded!");
+                    mDifficulty = 0;
                 }
             }
 
@@ -302,7 +303,6 @@ namespace Swordsman_Saga.Engine.DataTypes
                 if (task.IsTaskDone)
                 {
                     task.FindNewTask();
-                    mGameState = (int) (gametime.TotalGameTime.TotalMinutes - mGameStartTime.TotalMinutes);
                 }
                 FulfillTask(task);
             }
@@ -311,6 +311,8 @@ namespace Swordsman_Saga.Engine.DataTypes
             {
                 mTasks.Add(task);
             }
+
+            mGameState = (int)(gametime.TotalGameTime.TotalMinutes - mGameStartTime.TotalMinutes);
 
             mNewTasks.Clear();
 
@@ -323,6 +325,7 @@ namespace Swordsman_Saga.Engine.DataTypes
             data.mTimeSinceGameStart = mGameStartTime;
             data.mBarracksBuilt = mBarracksBuilt;
             data.mDivisionSizes = mDivisionSizes;
+            data.mDifficulty = mDifficulty;
             int count = 0;
             foreach (var pair in mDivisionMapping)
             {
@@ -345,6 +348,7 @@ namespace Swordsman_Saga.Engine.DataTypes
             mBarracksBuilt = gameData.mBarracksBuilt;
             mDivisionSizes = gameData.mDivisionSizes;
             mGameStartTime = gameData.mTimeSinceGameStart;
+            mDifficulty = gameData.mDifficulty;
             mDivisionMapping = LoadDivisions(gameData);
             mTasks = LoadTasks(gameData);
             Load();
@@ -369,12 +373,11 @@ namespace Swordsman_Saga.Engine.DataTypes
                 task.CantReachTarget = gameData.mTaskCantReachTarget[id];
                 task.Division = gameData.mTaskDivision[id];
                 task.IsMetaTask = gameData.mTaskIsMetaTask[id];
-                /*
                 if (gameData.mOther[id] != null)
                 {
-                    task.Other = DataPersistenceManager.Instance.FindObject(gameData.mOther[id]);
-                }*/
-                task.Self = DataPersistenceManager.Instance.FindObject(gameData.mSelf[id]);
+                    DataPersistenceManager.Instance.SetOtherTask(task);
+                }
+                DataPersistenceManager.Instance.SetSelfTask(task);
                 tasks.Add(task);
             }
             return tasks;
@@ -399,12 +402,11 @@ namespace Swordsman_Saga.Engine.DataTypes
                 task.CantReachTarget = gameData.mTaskCantReachTarget[id];
                 task.Division = gameData.mTaskDivision[id];
                 task.IsMetaTask = gameData.mTaskIsMetaTask[id];
-                task.Self = DataPersistenceManager.Instance.FindObject(gameData.mSelf[id]);
-                /*
+                DataPersistenceManager.Instance.SetOtherTask(task);
                 if (gameData.mOther[id] != null)
                 {
-                    task.Other = DataPersistenceManager.Instance.FindObject(gameData.mOther[id]);
-                }*/
+                    DataPersistenceManager.Instance.SetOtherTask(task);
+                }
                 divisions.Add(task.Division, task);
             }
             return divisions;
@@ -459,140 +461,204 @@ namespace Swordsman_Saga.Engine.DataTypes
 
                     // Building logic
                     Worker worker = task.Self as Worker;
-                    if (task.IsNewTask)
-                    {
-                        if (mResourceHud.AIStoneCount < mBuildingSelectionOverlay.GetBuildingCost(0).X || mResourceHud.AIWoodCount < mBuildingSelectionOverlay.GetBuildingCost(1).Y)
+                        if (task.IsNewTask)
                         {
-                            mAreResourcesReserved = 3;
+
+                            if (mDifficulty == 0 && mBuildingsBuilt > (mGameState + 2))
+                        {
+                                break;
+                            }
+                            if (mDifficulty == 1 && mBuildingsBuilt > mGameState * 2 + 2)
+                            {
+                                break;
+                            }
+
+                        if (mResourceHud.AIStoneCount < mBuildingSelectionOverlay.GetBuildingCost(0).X ||
+                                mResourceHud.AIWoodCount < mBuildingSelectionOverlay.GetBuildingCost(1).Y)
+                            {
+                                mAreResourcesReserved = 3;
+                                break;
+                            }
+
+
+                            Diamond snappedToGridDiamond =
+                                mGrid.GetGridDiamondFromPixel(GetNearestResource(worker.Position));
+                            int maxTries = 5;
+                            while (maxTries > 0 && ((IMovingObject)task.Self).FindLengthOfPath() >
+                                   Vector2.Distance(worker.Position,
+                                       new Vector2(snappedToGridDiamond.X, snappedToGridDiamond.Y)) + 200d)
+                            {
+                                snappedToGridDiamond = mGrid.GetGridDiamondFromPixel(
+                                    GetNearestResource(worker.Position + new Vector2(mRandom.Next(-200, 200),
+                                        mRandom.Next(-200, 200))));
+                                maxTries--;
+                            }
+
+                            task.Goal = new Vector2(snappedToGridDiamond.X, snappedToGridDiamond.Y);
+                            task.Range = 100;
+
+                            IBuilding building = null;
+
+                            if (mGrid.GetStaticObjectFromPixel(task.Goal) is Tree &&
+                                mResourceHud.UseResources(mBuildingSelectionOverlay.GetBuildingCost(1), 1))
+                            {
+                                building = new LumberCamp(null,
+                                    (int)task.Goal.X,
+                                    (int)task.Goal.Y,
+                                    1,
+                                    mContentManager,
+                                    mFightManager, mStatisticsManager);
+                                mWoodToStoneRatio += 0.6f;
+
+                            }
+                            else if (mGrid.GetStaticObjectFromPixel(task.Goal) is Stone &&
+                                     mResourceHud.UseResources(mBuildingSelectionOverlay.GetBuildingCost(0), 1))
+                            {
+                                building = new Quarry(null,
+                                    (int)task.Goal.X,
+                                    (int)task.Goal.Y,
+                                    1,
+                                    mContentManager,
+                                    mFightManager, mStatisticsManager);
+                                mWoodToStoneRatio -= 0.6f;
+
+                            }
+                            else if (!mGrid.CheckIfGridLocationIsFilledFromPixel(task.Goal) &&
+                                     mResourceHud.UseResources(mBuildingSelectionOverlay.GetBuildingCost(2), 1))
+                            {
+                                building = new Barracks(null,
+                                    (int)task.Goal.X,
+                                    (int)task.Goal.Y,
+                                    1,
+                                    mContentManager,
+                                    mFightManager);
+                                ((Barracks)building).TroopSelection = TroopSelectionOverlay.Instance;
+                                SetupBarracks((Barracks)building);
+                                mBarracksBuilt++;
+                            }
+                            else
+                            {
+                                break;
+                            }
+
+                            if (mDifficulty == 0)
+                            {
+                                mResourceHud.UseResources(new Vector2(100, 100), 1);
+                            }
+                            else if (mDifficulty == 1)
+                            {
+                                mResourceHud.UseResources(new Vector2(50, 50), 1);
+                            }
+
+                            building.ResourceHud = mResourceHud;
+                            mObjectHandler.QueueCreateOverwrite(building);
+                            mBuildingsBuilt++;
+                            mAreResourcesReserved = -1;
+
+                            mObjectHandler.QueueMove(worker, task.Goal, false);
+
+                            worker.IsMovingToBuild = true;
+                            worker.BuildingBeingBuilt = building;
+
+                            task.IsNewTask = false;
                             break;
                         }
 
-
-                        Diamond snappedToGridDiamond = mGrid.GetGridDiamondFromPixel(GetNearestResource(worker.Position));
-                        int maxTries = 5;
-                        while (maxTries > 0 && ((IMovingObject)task.Self).FindLengthOfPath() > Vector2.Distance(worker.Position, new Vector2(snappedToGridDiamond.X, snappedToGridDiamond.Y)) + 200d)
-                        {
-                            snappedToGridDiamond = mGrid.GetGridDiamondFromPixel(GetNearestResource(worker.Position + new Vector2(mRandom.Next(-200, 200), mRandom.Next(-200, 200))));
-                            maxTries--;
-                        }
-                        task.Goal = new Vector2(snappedToGridDiamond.X, snappedToGridDiamond.Y);
-                        task.Range = 100;
-
-                        IBuilding building = null;
-
-                        if (mGrid.GetStaticObjectFromPixel(task.Goal) is Tree && mResourceHud.UseResources(mBuildingSelectionOverlay.GetBuildingCost(1), 1))
-                        {
-                            building = new LumberCamp(null, (int)task.Goal.X, (int)task.Goal.Y, 1, mContentManager, mFightManager);
-                            mWoodToStoneRatio += 0.6f;
-
-                        }
-                        else if (mGrid.GetStaticObjectFromPixel(task.Goal) is Stone && mResourceHud.UseResources(mBuildingSelectionOverlay.GetBuildingCost(0), 1))
-                        {
-                            building = new Quarry(null, (int)task.Goal.X, (int)task.Goal.Y, 1, mContentManager, mFightManager);
-                            mWoodToStoneRatio -= 0.6f;
-
-                        }
-                        else if (!mGrid.CheckIfGridLocationIsFilledFromPixel(task.Goal) && mResourceHud.UseResources(mBuildingSelectionOverlay.GetBuildingCost(2), 1))
-                        {
-                            building = new Barracks(null, (int)task.Goal.X, (int)task.Goal.Y, 1, mContentManager, mFightManager);
-                            ((Barracks)building).TroopSelection = TroopSelectionOverlay.Instance;
-                            SetupBarracks((Barracks)building);
-                            mBarracksBuilt++;
-                        }
-                        else
-                        {
-                            break;
-                        }
-
-                        if (mDifficulty == 0)
-                        {
-                            mResourceHud.UseResources(new Vector2(100, 100), 1);
-                        }
-                        else if (mDifficulty == 1)
-                        {
-                            mResourceHud.UseResources(new Vector2(50, 50), 1);
-                        }
-
-                        building.ResourceHud = mResourceHud;
-                        mObjectHandler.QueueCreateOverwrite(building);
-                        mBuildingsBuilt++;
-                        mAreResourcesReserved = -1;
-
-                        mObjectHandler.QueueMove(worker, task.Goal, false);
-
-                        worker.IsMovingToBuild = true;
-                        worker.BuildingBeingBuilt = building;
-
-                        task.IsNewTask = false;
-                        break;
-                    }
-                    if (worker.IsBuilding && worker.IsMovingToBuild && Vector2.Distance(worker.BuildingBeingBuilt.Position, worker.Position) > 100)
-                    {
-                        if (Debugger.IsAttached)
-                        {
-                            Debug.WriteLine($"This message shouldn't pop up. The worker is bugged.");
-                        }
-                        //task.IsTaskDone = true;
-                        //task.AssignTask(TaskType.AttackMapObject);
-                        break;
-                    }
-                    if (worker.IsColliding)
-                    {
-                        task.Stuck++;
-                    }
-                    if (task.Stuck > 100)
-                    {
-                        if (Debugger.IsAttached)
-                        {
-                            Debug.WriteLine("AI Worker stuck in wall or something.");
-                        }
-                        //mObjectHandler.QueueMove(worker, worker.BuildingBeingBuilt.Position, false);
-                        task.Stuck = 0;
-                    }
-                    if (((IBuilding)worker.BuildingBeingBuilt).BuildState == 2)
-                    {
-                        task.IsTaskDone = true;
-                        task.Stuck = 0;
-                        task.CantReachTarget = 0;
-
-                        if (worker.BuildingBeingBuilt is Barracks)
-                        {
-                            mNewTasks.Add(new Task(worker.BuildingBeingBuilt));
-                        }
-                        break;
-                    }
-                    if (!worker.IsMoving && worker.Goal != worker.Position && !worker.IsBuilding)
-                    {
-                        task.CantReachTarget++;
-
-                        if (task.CantReachTarget >= 15)
+                        if (worker.IsBuilding && worker.IsMovingToBuild &&
+                            Vector2.Distance(worker.BuildingBeingBuilt.Position, worker.Position) > 100)
                         {
                             if (Debugger.IsAttached)
                             {
-                                Debug.WriteLine("Worker Stuck!");
+                                Debug.WriteLine($"This message shouldn't pop up. The worker is bugged.");
                             }
-                            mObjectHandler.QueueDelete(worker.BuildingBeingBuilt);
 
-                            mBuildingsBuilt--;
-                            if (worker.BuildingBeingBuilt is Barracks) { mBarracksBuilt--; }
-
-                            worker.BuildingBeingBuilt = null;
-                            worker.IsMovingToBuild = false;
-
-                            mResourceHud.AIStoneCount += 80;
-                            mResourceHud.AIWoodCount += 80;
-
-                            task.IsTaskDone = true;
-                            task.CantReachTarget = 0;
+                            //task.IsTaskDone = true;
+                            //task.AssignTask(TaskType.AttackMapObject);
+                            break;
                         }
-                        break;
+
+                        if (worker.IsColliding)
+                        {
+                            task.Stuck++;
+                        }
+
+                        if (task.Stuck > 100)
+                        {
+                            if (Debugger.IsAttached)
+                            {
+                                Debug.WriteLine("AI Worker stuck in wall or something.");
+                            }
+
+                            //mObjectHandler.QueueMove(worker, worker.BuildingBeingBuilt.Position, false);
+                            task.Stuck = 0;
+                        }
+                        
+                        //Debug.WriteLine((worker.BuildingBeingBuilt).BuildState);
+                        if ((worker.BuildingBeingBuilt).BuildState == 2)
+                        {
+                            task.IsTaskDone = true;
+                            task.Stuck = 0;
+                            task.CantReachTarget = 0;
+
+                            if (worker.BuildingBeingBuilt is Barracks)
+                            {
+                                mNewTasks.Add(new Task(worker.BuildingBeingBuilt));
+                            }
+
+                            break;
+                        }
+
+                        if (!worker.IsMoving && worker.Goal != worker.Position && !worker.IsBuilding)
+                        {
+                            task.CantReachTarget++;
+
+                            if (task.CantReachTarget >= 15)
+                            {
+                                if (Debugger.IsAttached)
+                                {
+                                    Debug.WriteLine("Worker Stuck!");
+                                }
+
+                                mObjectHandler.QueueDelete(worker.BuildingBeingBuilt);
+
+                                mBuildingsBuilt--;
+                                if (worker.BuildingBeingBuilt is Barracks)
+                                {
+                                    mBarracksBuilt--;
+                                }
+
+                                worker.BuildingBeingBuilt = null;
+                                worker.IsMovingToBuild = false;
+
+                                mResourceHud.AIStoneCount += 80;
+                                mResourceHud.AIWoodCount += 80;
+
+                                task.IsTaskDone = true;
+                                task.CantReachTarget = 0;
+                            }
+
+                            break;
+                        
                     }
+
                     break;
+                    
 
                 // ####################################   BUILD UNIT   #########################################
 
                 case TaskType.BuildUnit:
 
+                    if (mDifficulty == 0)
+                    {
+                        if (mDivisionSizes.TryGetValue(0, out int size))
+                        {
+                            if (size > mGameState) { break; }
+                        }
+                        else if (mGameState == 0)
+                        {
+                            break;
+                        }
+                    }
                     task.IsNewTask = false;
 
                     Barracks barracks = task.Self as Barracks;
@@ -1071,7 +1137,7 @@ namespace Swordsman_Saga.Engine.DataTypes
 
         private int GetEnemyAttack(Vector2 pos)
         {
-            int target = mGrid.GetFirstLocThatFulFillsLambda(mGrid.TranslateToGrid(pos), SpotHasAttackableEnemy, 50);
+            int target = mGrid.GetFirstLocThatFulFillsLambda(mGrid.TranslateToGrid(pos), SpotHasAttackableEnemy, 30);
             if (target != -1)
             {
                 return target;
@@ -1117,7 +1183,7 @@ namespace Swordsman_Saga.Engine.DataTypes
 
         // This code shouldn't be here, but as it was not encapsulated and lies in worldScreen there is no way for me to use it without copying it to below.
 
-        private void SetupBarracks(Barracks barracks)
+        public void SetupBarracks(Barracks barracks)
         {
             barracks.OnTroopSpawn += HandleTroopSpawn;
         }

@@ -78,7 +78,7 @@ namespace Swordsman_Saga.GameElements.Screens.HUDs
             int startY = mGraphicsDeviceManager.PreferredBackBufferHeight - (int)mButtonSize.Y - 10;
             int buttonX = startX + ((int)mButtonSize.X + 10);
             mUpgradeButton = new RecruitementButton(new Vector2(buttonX, startY), mButtonSize, 0, 0, mContentManager, mInputManager, "Upgrade");
-            mUpgradeButton.Clicked += () => { UpgradeBuilding(); };
+            mUpgradeButton.Clicked += () => { if (!UpgradeBuilding()) { IsVisiblebtn = true; } };
             startX = mGraphicsDeviceManager.PreferredBackBufferWidth - (int)mButtonSize.X - 10;
             startY = mGraphicsDeviceManager.PreferredBackBufferHeight - (int)mButtonSize.Y - 10;
             mDemolishButton = new OtherButtons(new Vector2(startX, startY), mButtonSize, mContentManager, mInputManager, "Demolish");
@@ -95,9 +95,9 @@ namespace Swordsman_Saga.GameElements.Screens.HUDs
             mObjectHandler.QueueDelete(mSelectedBuilding);
         }
 
-        private void UpgradeBuilding()
+        private bool UpgradeBuilding()
         {
-            mSelectedBuilding.UpgradeBuilding();
+            return mSelectedBuilding.UpgradeBuilding();
         }
 
 
@@ -107,6 +107,19 @@ namespace Swordsman_Saga.GameElements.Screens.HUDs
             mUpgradeButton.Update(inputState);
             if (mSelectedBuilding != null)
             {
+                if (mSelectedBuilding.IsUpgrading())
+                {
+                    mUpgradeButton.ChangeText("Upgrading!...");
+                }
+                else if (mSelectedBuilding.ResourceHud.WoodCount <= mSelectedBuilding.UpgradeCost.X || mSelectedBuilding.ResourceHud.StoneCount <= mSelectedBuilding.UpgradeCost.Y)
+                {
+                    mUpgradeButton.ChangeText("No Resources!");
+                }
+                else
+                {
+                    mUpgradeButton.ChangeText("Upgrade");
+                }
+
                 mUpgradeButton.SetWoodStoneCost(mSelectedBuilding.UpgradeCost);
             }
             mDemolishButton.Update(inputState);

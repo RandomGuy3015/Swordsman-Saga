@@ -7,6 +7,7 @@ using Swordsman_Saga.Engine.FightManagement;
 using Swordsman_Saga.Engine.ObjectManagement;
 using Swordsman_Saga.Engine.SoundManagement;
 using Swordsman_Saga.GameElements.Screens.HUDs;
+using System.Reflection;
 
 namespace Swordsman_Saga.GameElements.GameObjects.Buildings;
 
@@ -43,15 +44,21 @@ class Quarry : IResourceBuilding
     private double mResourcetime = 0;
     private bool mUpgrading = false;
 
-    public void UpgradeBuilding()
+    public bool UpgradeBuilding()
     {
-        mUpgrading = true;
-        mResourcetime = 0;
+        if (ResourceHud.WoodCount >= UpgradeCost.X && ResourceHud.StoneCount >= UpgradeCost.Y)
+        {
+            mUpgrading = true;
+            ResourceHud.UseResources(UpgradeCost, Team);
+            mResourcetime = 0;
+            return true;
+        }
+        return false;
     }
     public SoundManager Sound { get; set; }
 
 
-    public Quarry(string id, int x, int y, int player, DynamicContentManager contentManager, FightManager fightManager, StatisticsManager statisticsManager = null)
+    public Quarry(string id, int x, int y, int player, DynamicContentManager contentManager, FightManager fightManager, StatisticsManager statisticsManager)
     {
 
         if (id == null)
@@ -67,7 +74,7 @@ class Quarry : IResourceBuilding
         Position = new Vector2(x, y);
         ((IGameObject)this).InitializeRectangles(150, 100, 50, 50);
         // nur irgendwelche Beispielwerte
-        MaxHealth = 400;
+        MaxHealth = 250;
         Health = MaxHealth;
         Team = player;
         StoneGeneration = 5;
@@ -78,7 +85,7 @@ class Quarry : IResourceBuilding
         if (player == 0)
         {
             TexturePreview = contentManager.Load<Texture2D>("2DAssets/Buildings/friendly_stonequarry_preview");
-            TexturePreviewSelected = contentManager.Load<Texture2D>("2DAssets/Buildings/friendly_stonequarry_preview_selected");
+            TexturePreviewSelected = contentManager.Load<Texture2D>("2DAssets/Buildings/friendly_stonequarry_preview");
 
             TextureBeingBuilt = contentManager.Load<Texture2D>("2DAssets/Buildings/friendly_stonequarry_being_built");
             TextureBeingBuiltSelected = contentManager.Load<Texture2D>("2DAssets/Buildings/friendly_stonequarry_being_built_selected");
@@ -119,14 +126,17 @@ class Quarry : IResourceBuilding
 
         if (mResourcetime >= 10 && mUpgrading)
         {
-            ResourceHud.WoodCount -= (int)UpgradeCost.X;
-            ResourceHud.StoneCount -= (int)UpgradeCost.Y;
-            StoneGeneration = (int)((float)StoneGeneration * 1.1f) + 5;
+            StoneGeneration = (int)((float)StoneGeneration * 1.2f) + 5;
             UpgradeCost += new Vector2(120, 80);
             Level += 1;
             mUpgrading = false;
             mResourcetime = 0;
         }
+    }
+
+    public bool IsUpgrading()
+    {
+        return mUpgrading;
     }
 
     void IDataPersistence.SaveData(ref GameData data)
