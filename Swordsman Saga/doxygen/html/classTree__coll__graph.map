@@ -1,9 +1,0 @@
-<map id="Tree" name="Tree">
-<area shape="rect" id="node1" title=" " alt="" coords="195,304,245,331"/>
-<area shape="rect" id="node2" href="$interfaceIMapObject.html" title=" " alt="" coords="172,229,268,256"/>
-<area shape="rect" id="node3" href="$interfaceIStaticObject.html" title=" " alt="" coords="95,155,201,181"/>
-<area shape="rect" id="node4" href="$interfaceIGameObject.html" title=" " alt="" coords="95,80,201,107"/>
-<area shape="rect" id="node5" href="$interfaceIDrawableObject.html" title=" " alt="" coords="5,5,136,32"/>
-<area shape="rect" id="node6" href="$interfaceSwordsman__Saga_1_1Engine_1_1DataPersistence_1_1IDataPersistence.html" title=" " alt="" coords="161,5,293,32"/>
-<area shape="rect" id="node7" title=" " alt="" coords="225,155,359,181"/>
-</map>

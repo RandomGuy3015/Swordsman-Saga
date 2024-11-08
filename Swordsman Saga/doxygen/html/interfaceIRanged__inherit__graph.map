@@ -1,9 +1,0 @@
-<map id="IRanged" name="IRanged">
-<area shape="rect" id="node1" title=" " alt="" coords="185,229,260,256"/>
-<area shape="rect" id="node7" href="$classArcher.html" title=" " alt="" coords="191,304,255,331"/>
-<area shape="rect" id="node2" href="$interfaceIUnit.html" title=" " alt="" coords="196,155,249,181"/>
-<area shape="rect" id="node3" href="$interfaceIMovingObject.html" title=" " alt="" coords="14,80,130,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,5,139,32"/>
-<area shape="rect" id="node5" title=" " alt="" coords="155,80,291,107"/>
-<area shape="rect" id="node6" href="$interfaceIUpdateableObject.html" title=" " alt="" coords="315,80,458,107"/>
-</map>
