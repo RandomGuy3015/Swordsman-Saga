@@ -1,6 +1,6 @@
 ## Swordsman Saga
 
-Willkommen! Hier ist das Spiel, welches ich (zusammen mit 6 anderen Studenten) entwickelt haben über ein Semester hinweg.
+Willkommen! Hier ist das Spiel, welches ich (zusammen mit 6 anderen Studenten) entwickelt habe. Fühle dich wie zu Hause.
 
 ## Steuerung, Spielprinzip, usw.: 
 
